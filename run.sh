@@ -14,3 +14,7 @@ prometheus.scrape "beyla" {
   targets = beyla.ebpf.default.targets
   forward_to = [prometheus.remote_write.metrics_service.receiver]
 }
+
+
+alloy run --stability.level=public-preview /etc/alloy/config.alloy
+./beyla 
